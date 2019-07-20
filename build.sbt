@@ -5,7 +5,7 @@ import sbt.librarymanagement.TrackLevel.TrackIfMissing
 
 // Bare style
 // This syntax is recommended for "ThisBuild" scoped settings and adding plugins.
-ThisBuild / scalaVersion := "2.13.0"
+ThisBuild / scalaVersion := "2.12.0"
 version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
@@ -14,7 +14,12 @@ lazy val hello = taskKey[Unit]("An example task")
 
 // Common settings
 lazy val commonSettings = Seq(
-  libraryDependencies += scalaTest % Test
+  libraryDependencies ++= Seq(
+    scalaTest % Test,
+    "org.apache.logging.log4j" %% "log4j-api-scala" % "11.0",
+    "org.apache.logging.log4j" % "log4j-api" % "2.11.0",
+    "org.apache.logging.log4j" % "log4j-core" % "2.11.0" % Runtime
+  )
 )
 
 
