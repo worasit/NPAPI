@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  cassandra:
+    image: bitnami/cassandra
+    ports:
+      - "9042:9042"
+      - "7199:7199"
+      - "7000:7000"

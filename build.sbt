@@ -9,20 +9,6 @@ ThisBuild / scalaVersion := "2.12.0"
 version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
-// Example customized tasks "sbt hello"
-lazy val hello = taskKey[Unit]("An example task")
-
-// Common settings
-lazy val commonSettings = Seq(
-  libraryDependencies ++= Seq(
-    scalaTest % Test,
-    "org.apache.logging.log4j" %% "log4j-api-scala" % "11.0",
-    "org.apache.logging.log4j" % "log4j-api" % "2.11.0",
-    "org.apache.logging.log4j" % "log4j-core" % "2.11.0" % Runtime
-  )
-)
-
-
 lazy val NPAPI = (project in file("."))
   .aggregate(NPAPI_CORE, NPAPI_UTIL)
   .dependsOn(NPAPI_CORE)
