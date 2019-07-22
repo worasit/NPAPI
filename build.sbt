@@ -9,6 +9,11 @@ ThisBuild / scalaVersion := "2.12.0"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
+resolvers ++= Seq(
+  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+)
+
+
 lazy val NPAPI = (project in file("."))
   .aggregate(NPAPI_CORE, NPAPI_UTIL)
   .dependsOn(NPAPI_CORE)
