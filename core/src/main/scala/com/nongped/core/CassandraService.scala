@@ -11,4 +11,8 @@ class CassandraService extends Service with Logging {
   override def close(): Unit = {
     logger.info("Close")
   }
+
+  def test(x: Int, y: Int, z: Int): Unit = {
+    ???
+  }
 }
