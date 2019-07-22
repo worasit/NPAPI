@@ -6,7 +6,7 @@ import sbt.librarymanagement.TrackLevel.TrackIfMissing
 // Bare style
 // This syntax is recommended for "ThisBuild" scoped settings and adding plugins.
 ThisBuild / scalaVersion := "2.12.0"
-version := "0.1.0-SNAPSHOT"
+ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
 lazy val NPAPI = (project in file("."))
