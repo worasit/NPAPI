@@ -4,12 +4,8 @@ import com.nongped.core.CassandraService
 import org.apache.logging.log4j.scala.Logging
 
 object Boot extends App with Logging {
-  val cassandraService =
-    new CassandraService()
-  logger
-    .info(
-      "Hello Nongped API V.2"
-    )
-  cassandraService
-    .connect()
+  val cassandraService = new CassandraService()
+  val x                = 10
+  logger.info("Hello Nongped API V.2")
+  cassandraService.connect()
 }
