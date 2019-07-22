@@ -1,13 +1,26 @@
 version: '3.4'
 services:
+  landoop:
+    image: landoop/fast-data-dev
+    hostname: localhost
+    ports:
+      - "2181:2181"
+      - "3030:3030"
+      - "8081-8083:8081-8083"
+      - "9581-9585:9581-9585"
+      - "9092:9092"
+    environment:
+      RUNNING_SAMPLEDATA: 1
   cassandra:
     image: bitnami/cassandra
+    hostname: localhost
     ports:
       - "9042:9042"
       - "7199:7199"
       - "7000:7000"
   mssql:
     image: mcr.microsoft.com/mssql/server:2017-latest
+    hostname: localhost
     ports:
       - "1433:1433"
     environment:
@@ -15,6 +28,7 @@ services:
       SA_PASSWORD: "ThisIsAdminP@ssword123"
   redis:
     image: bitnami/redis
+    hostname: localhost
     ports:
       - "6379:6379"
     environment:
