@@ -9,6 +9,12 @@ ThisBuild / scalaVersion := "2.12.0"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
+coverageMinimum := 70
+coverageFailOnMinimum := false
+coverageHighlighting := true
+publishArtifact in Test := false
+parallelExecution in Test := false
+
 resolvers ++= Seq(
   "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 )
