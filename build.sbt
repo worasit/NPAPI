@@ -14,10 +14,12 @@ coverageFailOnMinimum := false
 coverageHighlighting := true
 publishArtifact in Test := false
 parallelExecution in Test := false
+sonarUseExternalConfig := true
 
 resolvers ++= Seq(
   "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 )
+//export SONAR_SCANNER_HOME=/usr/local/bin/sonar-scanner
 
 lazy val NPAPI = (project in file("."))
   .aggregate(NPAPI_CORE, NPAPI_UTIL)

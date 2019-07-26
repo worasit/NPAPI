@@ -72,7 +72,7 @@ publish-image:  ## Publish the data-processing docker image to the DataPlatform 
 
 test:  ## Execute the Unit tests
 	@echo "🧪 Execute the tests 🧪"
-	@sbt clean coverage test coverageReport
+	@sbt clean coverage test coverageReport sonarScan
 .PHONY: test
 
 setup: clean  ## Setting up the project and install all dependencies, please execute the activate command after finishing the project setup
