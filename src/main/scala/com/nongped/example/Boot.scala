@@ -9,3 +9,5 @@ object Boot extends App with Logging {
   logger.info("Hello Nongped API V.2")
   cassandraService.connect()
 }
+
+class thisShouldReportInSonarQube {}
