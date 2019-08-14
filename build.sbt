@@ -1,7 +1,6 @@
 import Dependencies._
 import sbt._
 import Keys._
-import sbt.librarymanagement.TrackLevel.TrackIfMissing
 
 // Bare style
 // This syntax is recommended for "ThisBuild" scoped settings and adding plugins.
@@ -28,7 +27,6 @@ lazy val NPAPI = (project in file("."))
   .settings(
     inThisBuild(
       Seq(
-        trackInternalDependencies := TrackIfMissing,
         exportJars := true
       )
     ),
