@@ -4,7 +4,7 @@ import Keys._
 
 // Bare style
 // This syntax is recommended for "ThisBuild" scoped settings and adding plugins.
-ThisBuild / scalaVersion := "2.11.8"
+ThisBuild / scalaVersion := "2.11.12"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
