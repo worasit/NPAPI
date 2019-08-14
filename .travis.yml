@@ -5,6 +5,9 @@ scala:
   - 2.12.2
   - 2.11.2
 
+env:
+  - CODECOV_TOKEN="6e9981d6-a934-4c57-ac1e-76973cf6b898"
+
 script:
   - sbt clean coverage test coverageReport
 
