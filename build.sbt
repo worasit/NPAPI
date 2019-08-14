@@ -5,7 +5,7 @@ import sbt.librarymanagement.TrackLevel.TrackIfMissing
 
 // Bare style
 // This syntax is recommended for "ThisBuild" scoped settings and adding plugins.
-ThisBuild / scalaVersion := "2.12.0"
+ThisBuild / scalaVersion := "2.11.2"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.nongped"
 
