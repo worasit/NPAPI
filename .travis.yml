@@ -1,9 +1,7 @@
 language: scala
 
 scala:
-  - 2.12.0
-  - 2.12.2
-  - 2.11.2
+  - 2.11.0
 
 env:
   - CODECOV_TOKEN="6e9981d6-a934-4c57-ac1e-76973cf6b898"
