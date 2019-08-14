@@ -13,7 +13,6 @@ coverageFailOnMinimum := false
 coverageHighlighting := true
 publishArtifact in Test := false
 parallelExecution in Test := false
-sonarUseExternalConfig := true
 
 resolvers ++= Seq(
   "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
