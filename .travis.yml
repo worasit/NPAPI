@@ -1,4 +1,6 @@
 language: scala
+cache:
+  bundler: true
 
 scala:
   - 2.11.12
